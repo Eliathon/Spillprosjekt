@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfkr0bd4vnal1"]
+
+[ext_resource type="Texture2D" uid="uid://cwvr7b4vi6622" path="res://graphics/enemy_ghost.png" id="1_hm0od"]
+[ext_resource type="Script" path="res://scenes/enemies/ghost.gd" id="1_vg5x6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g12tq"]
+radius = 17.0
+
+[node name="Ghost" type="CharacterBody2D"]
+script = ExtResource("1_vg5x6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 0)
+texture = ExtResource("1_hm0od")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g12tq")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://le5hj7k70xw6"]
+
+[ext_resource type="PackedScene" uid="uid://bbv7qm0ernbkb" path="res://scenes/maps/map.tscn" id="1_lvlga"]
+[ext_resource type="PackedScene" uid="uid://dfkr0bd4vnal1" path="res://scenes/enemies/ghost.tscn" id="2_e7vru"]
+[ext_resource type="PackedScene" uid="uid://byf42het2c46y" path="res://scenes/towers/tower.tscn" id="3_dk7sv"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("1_lvlga")]
+position = Vector2(606, 343)
+scale = Vector2(15, 15)
+
+[node name="Ghost" parent="." instance=ExtResource("2_e7vru")]
+position = Vector2(128, 116)
+
+[node name="Tower" parent="." instance=ExtResource("3_dk7sv")]
+position = Vector2(1035, 456)
