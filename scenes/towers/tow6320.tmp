@@ -14,12 +14,3 @@ texture = ExtResource("2_rnnq5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n7tis")
-
-[node name="ProjectileReloadTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="ProjectileStartPosition" type="Node2D" parent="."]
-
-[node name="Marker2D" type="Marker2D" parent="ProjectileStartPosition"]
-
-[connection signal="timeout" from="ProjectileReloadTimer" to="." method="_on_projectile_reload_timer_timeout"]
