@@ -1,4 +1,9 @@
 class_name DamageTypes
 
-func utility_function():
-	return "This is a utility function"
+enum DamageTypes {
+	PHYSICAL,
+	FIRE,
+	ICE,
+	LIGHTNING,
+	DARK
+}

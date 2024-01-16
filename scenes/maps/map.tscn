@@ -5,4 +5,7 @@
 [node name="Map" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
 texture = ExtResource("1_wbja5")
+region_enabled = true
+region_rect = Rect2(-546, -300, 1349, 828)
