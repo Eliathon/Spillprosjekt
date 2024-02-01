@@ -12,11 +12,9 @@ script = ExtResource("1_214tj")
 position = Vector2(606, 343)
 
 [node name="Ghost" parent="." instance=ExtResource("2_e7vru")]
-position = Vector2(128, 116)
+position = Vector2(739, 334)
 
 [node name="Tower" parent="." instance=ExtResource("3_dk7sv")]
 position = Vector2(1035, 456)
 
 [node name="Projectiles" type="Node2D" parent="."]
-
-[connection signal="projectile" from="Tower" to="." method="_on_tower_projectile"]

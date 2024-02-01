@@ -1,15 +1,15 @@
 extends Area2D
 
-const DamageTypes = preload("res://utils/damage_types.gd").DamageTypes
-
-var speed: int = 1000
-var direction: Vector2 = Vector2.UP
-var attack_damage = 100
-var damage_type = DamageTypes.PHYSICAL
+@export var speed: float = 400.0
+var velocity: Vector2 = Vector2.ZERO
 
 func _process(delta):
-	position += direction * speed * delta
+	position += velocity * delta
 
-func _on_hit(target):
-	target.take_damage(attack_damage, damage_type)
-	queue_free()
+func fire(direction: Vector2):
+	velocity = direction * speed
+
+func _on_Projectile_body_entered(body):
+	if body.is_in_group("enemies"):
+		# Hit the enemy, apply damage
+		queue_free()  # Remove the projectile
