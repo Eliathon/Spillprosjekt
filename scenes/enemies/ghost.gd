@@ -5,7 +5,7 @@ func _ready():
 
 func _process(_delta):
 	var direction = Vector2(1, 0)
-	var speed: int = 250
+	var speed: int = 0
 	
 	velocity = direction * speed
 	move_and_slide()
