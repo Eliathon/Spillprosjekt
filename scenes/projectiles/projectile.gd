@@ -11,6 +11,7 @@ func _physics_process(delta):
 
 func fire(direction: Vector2):
 	velocity = direction * speed
+	rotation = direction.angle()
 
 func _on_Projectile_body_entered(body):
 	if body.is_in_group("enemies"):
