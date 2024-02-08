@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://le5hj7k70xw6"]
+[gd_scene load_steps=6 format=3 uid="uid://le5hj7k70xw6"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_214tj"]
 [ext_resource type="PackedScene" uid="uid://bbv7qm0ernbkb" path="res://scenes/maps/map.tscn" id="1_lvlga"]
 [ext_resource type="PackedScene" uid="uid://dfkr0bd4vnal1" path="res://scenes/enemies/ghost.tscn" id="2_e7vru"]
 [ext_resource type="PackedScene" uid="uid://byf42het2c46y" path="res://scenes/towers/tower.tscn" id="3_dk7sv"]
+[ext_resource type="PackedScene" uid="uid://eur022hg466k" path="res://scenes/user interface/ui.tscn" id="5_yrnng"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_214tj")
@@ -21,3 +22,5 @@ position = Vector2(374, 326)
 position = Vector2(1035, 456)
 
 [node name="Projectiles" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("5_yrnng")]

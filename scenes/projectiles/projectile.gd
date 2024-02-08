@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 400.0
+@export var speed: float = 800.0
 var velocity: Vector2 = Vector2.ZERO
 
 func _ready():
