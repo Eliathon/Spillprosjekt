@@ -2,11 +2,174 @@
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.068
+anchor_bottom = 0.062
+offset_right = 0.663994
+offset_bottom = -0.176003
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.9
-anchor_right = 0.2
+anchor_right = 0.861
+anchor_bottom = 0.825
+offset_right = -0.0190048
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.483
+anchor_right = 0.517
+anchor_bottom = 0.062
+offset_left = -50.416
+offset_right = 52.416
+offset_bottom = -0.176003
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Timer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.494118, 1, 1, 1)
+text = "12:34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wave Counter" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.789
+anchor_right = 0.873
+anchor_bottom = 0.062
+offset_left = 0.0719604
+offset_right = 1.30396
+offset_bottom = -0.176003
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Wave Counter"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "WAVE 1/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Towers" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.889
+anchor_right = 1.0
+anchor_bottom = 0.912
+offset_left = -0.128052
+offset_bottom = 0.0239868
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Towers"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_bottom = -56.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Towers/VBoxContainer"]
+layout_mode = 2
+text = "Label 1"
+
+[node name="Label2" type="Label" parent="Towers/VBoxContainer"]
+layout_mode = 2
+text = "Label 2"
+
+[node name="Label3" type="Label" parent="Towers/VBoxContainer"]
+layout_mode = 2
+text = "Label 3"
+
+[node name="Label4" type="Label" parent="Towers/VBoxContainer"]
+layout_mode = 2
+text = "Label 1"
+
+[node name="Label5" type="Label" parent="Towers/VBoxContainer"]
+layout_mode = 2
+text = "Label 5"
+
+[node name="Label6" type="Label" parent="Towers/VBoxContainer"]
+layout_mode = 2
+text = "Label 6"
+
+[node name="Abilities" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.914
+anchor_right = 0.888
+anchor_bottom = 1.0
+offset_top = 0.727966
+offset_right = 1.02393
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Abilities/HBoxContainer"]
+layout_mode = 2
+text = "Ability"
+
+[node name="Label2" type="Label" parent="Abilities/HBoxContainer"]
+layout_mode = 2
+text = "Ability"
+
+[node name="Label3" type="Label" parent="Abilities/HBoxContainer"]
+layout_mode = 2
+text = "Ability"
+
+[node name="Label4" type="Label" parent="Abilities/HBoxContainer"]
+layout_mode = 2
+text = "Ability"
+
+[node name="Resources" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.889
+anchor_top = 0.914
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.128052
+offset_top = -0.272034
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Resources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Resources/HBoxContainer"]
+custom_minimum_size = Vector2(84.135, 0)
+layout_mode = 2
+color = Color(0.952941, 0.952941, 0, 1)
+
+[node name="Label" type="Label" parent="Resources/HBoxContainer"]
+layout_mode = 2
+text = "Gold"
