@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://byf42het2c46y"]
+
+[ext_resource type="Script" path="res://scenes/towers/tower.gd" id="1_5j0sq"]
+[ext_resource type="Texture2D" uid="uid://dxgndwx5fsvl4" path="res://graphics/tower.png" id="2_rnnq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7tis"]
+size = Vector2(54, 54)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3g7wr"]
+radius = 187.131
+
+[node name="Tower" type="CharacterBody2D"]
+script = ExtResource("1_5j0sq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rnnq5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n7tis")
+
+[node name="ProjectileReloadTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_3g7wr")
+
+[connection signal="timeout" from="ProjectileReloadTimer" to="." method="_on_projectile_reload_timer_timeout"]
+[connection signal="body_entered" from="AttackRange" to="." method="_on_AttackRange_body_entered"]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_AttackRange_body_exited"]
