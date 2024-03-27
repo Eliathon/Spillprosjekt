@@ -3,11 +3,11 @@ extends CharacterBody2D
 signal projectile_fired(position)
 
 var projectile_scene: PackedScene = preload("res://scenes/projectiles/projectile.tscn")
+
 @export var attack_range = 500
 var attack_damage
 var attack_speed
 var can_projectile: bool = true
-
 var enemies_in_range = []
 var intercept_point: Vector2  # Declare intercept_point at a class level
 
